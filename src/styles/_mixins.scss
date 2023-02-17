@@ -1,0 +1,35 @@
+@mixin mediaMobileXs() {
+  @media (min-width: 320px) and (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin mediaMobile() {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mediaTablet() {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin mediaDesktop() {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin mediaDesktopXl() {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin mediaDesktop1440() {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

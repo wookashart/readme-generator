@@ -1,0 +1,28 @@
+// === colors === //
+$color_white: #ffffff;
+$color_black: #000000;
+
+// === Fonts === //
+$font_default: 'Poppins', sans-serif;
+
+// === Dimensions === //
+$font_size_large: 18px;
+$font_size_medium: 16px;
+$font_size_default: 14px;
+$font_size_small: 12px;
+$font_size_tiny: 11px;
+
+// === Breakpoints === //
+$sm: 360px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// === Animation === //
+$animation_fast: 200ms;
+$animation_slow: 350ms;
+$animation_subtle: 450ms;
+
+// === Other === //
+$shadow_default: 0px 3px 9px rgba(0, 0, 0, 0.25);
