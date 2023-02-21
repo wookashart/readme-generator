@@ -9,6 +9,10 @@ body {
   font-family: $font_default;
   font-weight: 400;
   background-color: $color_white;
+
+  &.dark-mode {
+    background-color: $color_bg_dm;
+  }
 }
 
 a {

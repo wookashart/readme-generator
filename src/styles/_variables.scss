@@ -2,6 +2,11 @@
 $color_white: #ffffff;
 $color_black: #000000;
 
+$color_gray_light: rgba(0, 0, 0, 0.05);
+$color_gray_light_dm: rgba(255, 255, 255, 0.1);
+$color_bg_dm: #0f0f0f;
+$color_green: #bada55;
+
 // === Fonts === //
 $font_default: 'Poppins', sans-serif;
 
@@ -11,6 +16,8 @@ $font_size_medium: 16px;
 $font_size_default: 14px;
 $font_size_small: 12px;
 $font_size_tiny: 11px;
+
+$page_width: 1300px;
 
 // === Breakpoints === //
 $sm: 360px;

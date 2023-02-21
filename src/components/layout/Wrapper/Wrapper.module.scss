@@ -1,0 +1,12 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
+.wrapper {
+  max-width: $page_width;
+  margin: auto;
+  padding: 0 20px;
+
+  @include mediaTablet {
+    padding: 0 26.5px;
+  }
+}
