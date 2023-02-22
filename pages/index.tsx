@@ -1,6 +1,9 @@
 // === Components === //
 import Page from '../src/components/layout/Page/Page';
 
+// === Helpers === //
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 export async function getServerSideProps(ctx) {
   const darkModeCookie = ctx.req?.cookies?.['dark-mode'] || null;
 
@@ -8,6 +11,7 @@ export async function getServerSideProps(ctx) {
     props: {
       darkMode: darkModeCookie && darkModeCookie === 'true' ? true : false,
       pageClassName: darkModeCookie && darkModeCookie === 'true' ? 'dark-mode' : '',
+      ...(await serverSideTranslations(ctx?.locale || 'en', ['common', 'navigation'])),
     },
   };
 }

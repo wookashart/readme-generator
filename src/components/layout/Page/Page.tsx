@@ -1,5 +1,5 @@
 // === Components === //
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../../sections/Navigation/Navigation';
 
 // === Helpers === //
 import { useEffect, useState } from 'react';
@@ -23,6 +23,7 @@ const Page = ({ children, darkMode }: IPage) => {
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', sDarkMode);
+    document.body.setAttribute('data-dark-mode', `${sDarkMode}`);
   }, [sDarkMode]);
 
   return (

@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 0;
+  width: 80px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px hsl(0deg 0% 0% / 10%), 0 4px 11px hsl(0deg 0% 0% / 10%);
+  overflow: hidden;
+  background-color: $color_gray_light;
+
+  @include darkMode {
+    background-color: $color_gray_light_dm;
+  }
+
+  > li {
+    margin: 0;
+    transition: background-color ease-in-out $animation_fast;
+
+    &:hover {
+      background-color: $color_gray_light_hover;
+
+      @include darkMode {
+        background-color: $color_gray_light_dm_hover;
+      }
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-size: $font_size_small;
+
+  @include darkMode {
+    color: $color_white;
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  padding: 15px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: $font_size_medium;
+
+  @include darkMode() {
+    color: $color_white;
+  }
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}

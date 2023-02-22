@@ -1,3 +1,5 @@
+@use "sass:selector";
+
 @mixin mediaMobileXs() {
   @media (min-width: 320px) and (max-width: 374px) {
     @content;
@@ -30,6 +32,12 @@
 
 @mixin mediaDesktop1440() {
   @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin darkMode() {
+  body[data-dark-mode="true"] & {
     @content;
   }
 }

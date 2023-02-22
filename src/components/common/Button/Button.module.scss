@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.button {
+  cursor: pointer;
+  outline: none;
+  background-color: $color_gray_light;
+  border: none;
+  min-width: 80px;
+  border-radius: 20px;
+  font-size: $font_size_small;
+  font-weight: 600;
+  padding: 6px 20px;
+  box-shadow: 0 0 0 1px hsl(0deg 0% 0% / 10%), 0 4px 11px hsl(0deg 0% 0% / 10%);
+  color: $color_black;
+  text-align: center;
+  transition: background-color ease-in-out $animation_fast;
+
+  &:hover {
+    background-color: $color_gray_light_hover;
+  }
+
+  @include darkMode {
+    background-color: $color_gray_light_dm;
+    color: $color_white;
+
+    &:hover {
+      background-color: $color_gray_light_dm_hover;
+    }
+  }
+}
