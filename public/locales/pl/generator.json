@@ -1,0 +1,8 @@
+{
+  "config_title": "Konfiguracja",
+  "config_framework_label": "Framework",
+  "config_node_label": "Wersja Node",
+  "config_node_custom_label": "Własna wersja",
+  "config_language_label": "Wersja językowa pliku Readme",
+  "preview_title": "Podgląd"
+}

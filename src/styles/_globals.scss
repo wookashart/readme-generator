@@ -22,8 +22,27 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: $font_default;
 }
 
-button {
-  font-family: $font_default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+
+  @include darkMode {
+    color: $color_white;
+  }
+}
+
+h1 {
+  font-size: $font_size_large;
+}
+
+h2 {
+  font-size: $font_size_medium;
 }

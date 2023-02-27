@@ -2,33 +2,31 @@
 import Navigation from '../../sections/Navigation/Navigation';
 
 // === Helpers === //
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 // === Types === //
 import { IPage } from './Page.d';
 
-const Page = ({ children, darkMode }: IPage) => {
-  const [sDarkMode, setSDarkMode] = useState<boolean>(darkMode);
-
+const Page = ({ children, darkMode, setDarkMode }: IPage) => {
   const handleSwitchToggle = () => {
-    if (sDarkMode) {
-      setSDarkMode(false);
+    if (darkMode) {
+      setDarkMode(false);
       Cookies.remove('dark-mode');
     } else {
-      setSDarkMode(true);
+      setDarkMode(true);
       Cookies.set('dark-mode', 'true', { expires: 365 });
     }
   };
 
   useEffect(() => {
-    document.body.classList.toggle('dark-mode', sDarkMode);
-    document.body.setAttribute('data-dark-mode', `${sDarkMode}`);
-  }, [sDarkMode]);
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.body.setAttribute('data-dark-mode', `${darkMode}`);
+  }, [darkMode]);
 
   return (
     <div>
-      <Navigation handleSwitchToggle={handleSwitchToggle} darkMode={sDarkMode} />
+      <Navigation handleSwitchToggle={handleSwitchToggle} darkMode={darkMode} />
       {children}
     </div>
   );

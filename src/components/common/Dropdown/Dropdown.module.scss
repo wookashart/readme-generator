@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  margin: 15px 0;
+}
+
+.label {
+  display: inline-block;
+  font-size: $font_size_default;
+  color: $color_black;
+  margin-bottom: 5px;
+
+  @include darkMode {
+    color: $color_white;
+  }
+}

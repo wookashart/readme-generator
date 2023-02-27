@@ -26,22 +26,22 @@ const LangSelector = () => {
         <span className={styles.button}>
           <Image
             priority
-            src={`/images/${t('currentLang').toLowerCase()}-svgrepo-com.svg`}
+            src={`/images/${t('current_lang').toLowerCase()}-svgrepo-com.svg`}
             height={18}
             width={18}
-            alt={`${t('currentLang')} flag icon`}
+            alt={`${t('current_lang')} flag icon`}
           />
-          {t('currentLang')}
+          {t('current_lang')}
         </span>
       </Button>
 
       {open && (
         <ul className={cn(styles.menu)}>
           {i18n.i18n.locales
-            .filter((locale) => locale !== t('currentLang').toLowerCase())
+            .filter((locale) => locale !== t('current_lang').toLowerCase())
             .map((locale) => {
               return (
-                <li className={styles['menu-item']}>
+                <li className={styles['menu-item']} key={locale}>
                   <Link
                     href="/"
                     locale={locale}

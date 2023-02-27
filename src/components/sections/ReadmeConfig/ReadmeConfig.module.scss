@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  border-right: 1px solid $color_gray_light_hover;
+  padding-right: 20px;
+
+  @include darkMode {
+    border-right: 1px solid $color_gray_light_dm_hover;
+  }
+}
